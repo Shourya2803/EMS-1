@@ -16,18 +16,19 @@ const CreateTask = () => {
     const submitHandler = (e) => {
         e.preventDefault()
 
-        setNewTask({ taskTitle, taskDescription, taskDate, category, active: false, newTask: true, failed: false, completed: false })
+        const newTaskData = { taskTitle, taskDescription, taskDate, category, active: false, newTask: true, failed: false, completed: false }
+        setNewTask(newTaskData)
 
         const data = userData
 
-        data.forEach(function (elem) {
-            if (asignTo == elem.firstName) {
-                elem.tasks.push(newTask)
+        data.forEach((elem) => {
+            if (asignTo?.toLowerCase() == elem.firstName.toLowerCase()) {
+                elem.tasks.push(newTaskData)
                 elem.taskCounts.newTask = elem.taskCounts.newTask + 1
             }
         })
         setUserData(data)
-        console.log(data);
+        // console.log(data);
 
         setTaskTitle('')
         setCategory('')

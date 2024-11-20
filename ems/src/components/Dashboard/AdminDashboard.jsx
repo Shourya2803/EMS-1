@@ -4,7 +4,8 @@ import CreateTask from '../other/CreateTask'
 // import CreateTask from '../'
 // import AllTask from '../other/AllTask'
 import AllTask from '../Other/AllTask'
-import Header from '../Other/Header'
+// import Header from '../Other/Header'
+import Header from '../other/Header'
 
 const AdminDashboard = (props) => {
     return (
