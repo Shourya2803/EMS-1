@@ -16,7 +16,11 @@ const CreateTask = () => {
     const submitHandler = (e) => {
         e.preventDefault()
 
+<<<<<<< HEAD
         const newTaskData = { taskTitle, taskDescription, taskDate, category, active: false, newTask: true, failed: false, completed: false }
+=======
+      const newTaskData = { taskTitle, taskDescription, taskDate, category, active: false, newTask: true, failed: false, completed: false }
+>>>>>>> 1e059b9883db5ed1f55386e40ca626345322f53e
         setNewTask(newTaskData)
 
         const data = userData
